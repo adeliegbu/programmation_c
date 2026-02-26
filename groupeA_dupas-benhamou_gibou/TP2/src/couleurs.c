@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    struct couleurs{  // Structure pour stocker les valeurs RGBA
+        int R;
+        int G;
+        int B;
+        int A;
+    };
+
+    struct couleurs couleur[10] = {  //Tableau de 10 structures couleurs
+        {0x12, 0x34, 0x56, 0xff},
+        {0xef, 0x78, 0x12, 0xff},
+        {0x34, 0x12, 0x78, 0xff},
+        {0x56, 0x90, 0xab, 0xff},
+        {0xcd, 0xef, 0x34, 0xff},
+        {0x12, 0x34, 0x56, 0xff},
+        {0x78, 0x9a, 0xbc, 0xff},
+        {0xde, 0xf0, 0x12, 0xff},
+        {0x34, 0x56, 0x78, 0xff},
+        {0x9a, 0xbc, 0xde, 0xff},
+        {0xf0, 0x12, 0x34, 0xff}
+    };
+
+    for (int i = 0; i < 10; i++) {  // On affiche les valeurs RGBA de chaque couleur
+        printf("Couleur %d : Rouge  : %d\nVert : %d\nBleu : %d\nAlpha : %d\n\n", i+1, couleur[i].R, couleur[i].G, couleur[i].B, couleur[i].A);
+    }
+}
